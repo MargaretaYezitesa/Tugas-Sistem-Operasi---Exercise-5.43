@@ -1,0 +1,55 @@
+#include<stdio.h>
+#include<unistd.h>
+#include<pthread.h>
+#include<stdlib.h>
+#define random_1(a,b) ((rand()%(b-a))+a)  //The random value will contain a without b
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+int value = 0;
+long double valid=0,all=1000000;//The initial effective point is 0, and the total number of points is 9000000
+long double pi=0;
+void*  fun(void* arg) {
+    pthread_mutex_lock(&mutex);   
+    long double x,y;//Define the coordinates x,y
+    int i=1;
+    
+    for(i=1;i<=9000000;i++)
+    {
+       
+
+    //Get the random value of x, y, 0<=x<100000, 0<=y<100000
+    x=random_1(0,100000);
+    y=random_1(0,100000);
+    if(x*x+y*y<=10000000000)
+    valid++;
+    }
+    pthread_mutex_unlock(&mutex);
+    return (void*)0;    
+}
+//Main function
+int main()
+{
+   
+    pthread_t theradId1, threadId2;//Define two child threads
+    int error;//Define the thread return value error, if the thread is successfully established, return 0, otherwise return the error number
+    pthread_mutex_init(&mutex, NULL);//Mutual exclusion lock initialization
+    error = pthread_create(&theradId1, NULL, fun, NULL);
+    sleep(2);//Use sleep() to control the different concurrent processes of sub-threads
+   
+    if(error) {
+        printf("Thread1 creat failed!\n");
+        exit(1);
+    }
+   error = pthread_create(&threadId2, NULL, fun, NULL);
+    if(error) {
+        printf("Thread2 creat failed!\n");
+        exit(1);
+    }
+   
+    pi=valid/9000000*4;
+    printf("The valid value is: %Lf\n",valid);
+    printf("The value of total points is 9000000\n");
+    printf("The value of π is: %Lf\n",pi);
+    //Process lock destruction
+    pthread_mutex_destroy(&mutex);
+    return 0;
+}
