@@ -1,0 +1,11 @@
+Soal ke-3.) Jelaskan logika program ini!
+
+Sebenarnya untuk logika dari kelompok kami, sama seperti yang sudah dijelasin program satu per satu pada program Java kemarin.
+Tetapi ada perbaikan program yaitu kurangnya mutex program, dan kami kemarin sudah menjelaskan ada beberapa file error di Cygwin.
+
+Menurut kami, kesimpulan logika yang didapat yaitu :
+1. Menentukan nilai acak/random untuk mencari Multithreading Pi Monte Carlo
+2. Titik efektif awal adalah 0, dan kelompok kami menentukan jumlah total poin adalah 9000000
+3. Lalu mencari panjang dari koordinat x,y
+4. Melakukan penginisialisasian jika ada error/kesalahan
+5. Lalu menampilkan nilai Pi yang mendekati 3,14 dan hasilnya pasti random juga
