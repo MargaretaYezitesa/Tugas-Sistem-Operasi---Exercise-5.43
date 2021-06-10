@@ -1,6 +1,6 @@
 Tugas kelompok dari :
 - Jonathan Steven Iskandar (203400006)
--.Margareta Yezitesa Marlin (203400009)
+- Margareta Yezitesa Marlin (203400009)
 
 Dosen Pengampu dari MatKul Sistem Operasi :
 - Stephanus Surijadarma Tandjung, A.Md., S.T., M.T., Ph.D (Dosen Ilmu Infomatika)
