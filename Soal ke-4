@@ -1,0 +1,4 @@
+Soal ke-4.) Apa guna source code ini?
+
+Source Codeo ini mengandung Mutex yang artinya mencari tau konsep pemrograman yang sering digunakan untuk memecahkan masalah multi-threading.
+Sedangkan Multithreading adalah sebuah sistem yang memungkinkan setiap program dapat dipecah ke dalam thread-thread yang kemudian dapat dijalankan secara terpisah oleh sistem operasi komputer.
