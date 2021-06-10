@@ -1,0 +1,4 @@
+Soal ke-1.) Untuk apakah tujuan program ini? 
+
+Menurut hasil dari kelompok kami, tujuan adalah mencari nilai pi = 3,14 melalui program mutex seperti yang sudah dijelasin kemarin.
+Tujuan simulasi Monte Carlo adalah menemukan nilai yang mendekati nilai sesungguhnya dengan menggunakan nilai-nilai yang dipilih secara random.
